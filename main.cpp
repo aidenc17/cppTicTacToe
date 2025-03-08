@@ -19,7 +19,7 @@ int main() {
     while (running) {
         playerMove(spaces, player);
         drawBoard(spaces);
-        if (checkWinner(spaces, player, computer)) {
+        if (!checkWinner(spaces, player, computer)) {
             running = false;
             break;
         }
@@ -31,7 +31,7 @@ int main() {
 
         computerMove(spaces, computer);
         drawBoard(spaces);
-        if (checkWinner(spaces, player, computer)) {
+        if (!checkWinner(spaces, player, computer)) {
             running = false;
             break;
         }
